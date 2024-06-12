@@ -10,30 +10,31 @@ import SwiftUI
 struct MainAdminView: View {
     var body: some View {
         TabView {
-//            AdminHomeView()
-//            VerifyingDoctorsView()
-//                .tabItem {
-//                    Label("Home", systemImage: "house")
-//                    
-//                }
-//            
-//            DoctorsList_AdminView()
-//                .tabItem {
-//                    Label("Doctors", systemImage: "person.badge.clock")
-//                    
-//                }
-//            
-//            PatientsList_AdminView()
-//                .tabItem {
-//                    Label("Patients", systemImage: "person.2.fill")
-//                }
-//            
-//            
-//            LaboratoryTests_AdminView()
-//                .tabItem {
-//                    Label("LabTests", systemImage: "person")
-//                }
-//            
+           AdminHomeView()
+               .tabItem {
+                    Label("Home", systemImage: "house")
+                    
+                }
+            
+            DoctorApprovalList()
+                 .tabItem {
+                     Label("ApprovalList", systemImage: "person.fill.checkmark")
+                 }
+             
+            
+            DoctorCategoryListView()
+                .tabItem {
+                    Label("Doctors", systemImage: "list.clipboard.fill")
+                    
+                }
+            
+          
+            
+           AdminProfile()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+            
             
             
         }

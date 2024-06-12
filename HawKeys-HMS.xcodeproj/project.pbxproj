@@ -30,6 +30,10 @@
 		C03BD71B2C1962E100D2FEA7 /* MainDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71A2C1962E100D2FEA7 /* MainDoctorView.swift */; };
 		C03BD71D2C1962F800D2FEA7 /* MainAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71C2C1962F800D2FEA7 /* MainAdminView.swift */; };
 		C03BD71F2C19638300D2FEA7 /* LaboratoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */; };
+		C03BD7252C19669600D2FEA7 /* DoctorCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7242C19669600D2FEA7 /* DoctorCategoryListView.swift */; };
+		C03BD7272C19681900D2FEA7 /* AdminHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */; };
+		C03BD7292C1968A800D2FEA7 /* AdminProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */; };
+		C03BD72B2C19701D00D2FEA7 /* DoctorApprovalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		C03BD71A2C1962E100D2FEA7 /* MainDoctorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDoctorView.swift; sourceTree = "<group>"; };
 		C03BD71C2C1962F800D2FEA7 /* MainAdminView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAdminView.swift; sourceTree = "<group>"; };
 		C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoryContentView.swift; sourceTree = "<group>"; };
+		C03BD7242C19669600D2FEA7 /* DoctorCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCategoryListView.swift; sourceTree = "<group>"; };
+		C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeView.swift; sourceTree = "<group>"; };
+		C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfile.swift; sourceTree = "<group>"; };
+		C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorApprovalList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +97,13 @@
 		C03BD6E72C19603000D2FEA7 /* HawKeys-HMS */ = {
 			isa = PBXGroup;
 			children = (
-				C03BD7112C19623700D2FEA7 /* Controllers */,
-				C03BD7012C19608E00D2FEA7 /* Models */,
 				C03BD6F82C19607C00D2FEA7 /* Authentication */,
 				C03BD7172C19625200D2FEA7 /* TabBars */,
-				C03BD6E82C19603000D2FEA7 /* HawKeys_HMSApp.swift */,
+				C03BD7012C19608E00D2FEA7 /* Models */,
+				C03BD7112C19623700D2FEA7 /* Controllers */,
+				C03BD7202C1963DB00D2FEA7 /* Views */,
 				C03BD6EA2C19603000D2FEA7 /* ContentView.swift */,
+				C03BD6E82C19603000D2FEA7 /* HawKeys_HMSApp.swift */,
 				C03BD7082C1961FE00D2FEA7 /* appGradient.swift */,
 				C03BD70A2C19620B00D2FEA7 /* navigationHelper.swift */,
 				C03BD6EC2C19603100D2FEA7 /* Assets.xcassets */,
@@ -154,6 +163,41 @@
 				C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */,
 			);
 			path = TabBars;
+			sourceTree = "<group>";
+		};
+		C03BD7202C1963DB00D2FEA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C03BD7212C19642D00D2FEA7 /* Patient */,
+				C03BD7232C19644000D2FEA7 /* Doctor */,
+				C03BD7222C19643800D2FEA7 /* Admin */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C03BD7212C19642D00D2FEA7 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		C03BD7222C19643800D2FEA7 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */,
+				C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */,
+				C03BD7242C19669600D2FEA7 /* DoctorCategoryListView.swift */,
+				C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		C03BD7232C19644000D2FEA7 /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Doctor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +276,13 @@
 				C03BD6F92C19607C00D2FEA7 /* userSignIn.swift in Sources */,
 				C03BD7062C19608E00D2FEA7 /* Patient.swift in Sources */,
 				C03BD6EB2C19603000D2FEA7 /* ContentView.swift in Sources */,
+				C03BD72B2C19701D00D2FEA7 /* DoctorApprovalList.swift in Sources */,
 				C03BD7052C19608E00D2FEA7 /* LabTestsList.swift in Sources */,
+				C03BD7292C1968A800D2FEA7 /* AdminProfile.swift in Sources */,
 				C03BD7122C19623700D2FEA7 /* adminController.swift in Sources */,
+				C03BD7272C19681900D2FEA7 /* AdminHomeView.swift in Sources */,
 				C03BD71D2C1962F800D2FEA7 /* MainAdminView.swift in Sources */,
+				C03BD7252C19669600D2FEA7 /* DoctorCategoryListView.swift in Sources */,
 				C03BD70B2C19620B00D2FEA7 /* navigationHelper.swift in Sources */,
 				C03BD7132C19623700D2FEA7 /* auth.swift in Sources */,
 				C03BD7032C19608E00D2FEA7 /* Appointment.swift in Sources */,
@@ -380,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HawKeys-HMS/Preview Content\"";
+				DEVELOPMENT_TEAM = R2862SJ6F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HawKeys-HMS/Preview Content\"";
+				DEVELOPMENT_TEAM = R2862SJ6F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
