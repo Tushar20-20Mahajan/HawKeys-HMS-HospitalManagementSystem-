@@ -34,6 +34,7 @@
 		C03BD7272C19681900D2FEA7 /* AdminHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */; };
 		C03BD7292C1968A800D2FEA7 /* AdminProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */; };
 		C03BD72B2C19701D00D2FEA7 /* DoctorApprovalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */; };
+		C08A61212C19AE0F0013E5FA /* DoctorInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08A61202C19AE0F0013E5FA /* DoctorInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeView.swift; sourceTree = "<group>"; };
 		C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfile.swift; sourceTree = "<group>"; };
 		C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorApprovalList.swift; sourceTree = "<group>"; };
+		C08A61202C19AE0F0013E5FA /* DoctorInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				C03BD7262C19681900D2FEA7 /* AdminHomeView.swift */,
 				C03BD72A2C19701D00D2FEA7 /* DoctorApprovalList.swift */,
+				C08A61202C19AE0F0013E5FA /* DoctorInformationView.swift */,
 				C03BD7242C19669600D2FEA7 /* DoctorCategoryListView.swift */,
 				C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */,
 			);
@@ -286,6 +289,7 @@
 				C03BD70B2C19620B00D2FEA7 /* navigationHelper.swift in Sources */,
 				C03BD7132C19623700D2FEA7 /* auth.swift in Sources */,
 				C03BD7032C19608E00D2FEA7 /* Appointment.swift in Sources */,
+				C08A61212C19AE0F0013E5FA /* DoctorInformationView.swift in Sources */,
 				C03BD7022C19608E00D2FEA7 /* Admin.swift in Sources */,
 				C03BD6E92C19603000D2FEA7 /* HawKeys_HMSApp.swift in Sources */,
 				C03BD71B2C1962E100D2FEA7 /* MainDoctorView.swift in Sources */,

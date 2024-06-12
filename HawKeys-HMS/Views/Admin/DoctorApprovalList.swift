@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import SwiftUI
 
 class DoctorApprovalModel: ObservableObject {
     @Published var doctorsForApprovalAndInTheDataBaseOfHospital: [Doctor] = []
@@ -52,6 +51,9 @@ class DoctorApprovalModel: ObservableObject {
     }
 }
 
+
+import SwiftUI
+
 struct DoctorApprovalList: View {
     @StateObject private var dataModel = DoctorApprovalModel()
     @State private var showingConfirmation = false
@@ -101,6 +103,8 @@ struct DoctorApprovalList: View {
                                 selectedDoctor = doctor
                                 confirmationType = .reject
                                 showingConfirmation = true
+                            }, onInfo: {
+                                selectedDoctor = doctor
                             })
                         }
                     }
@@ -133,6 +137,7 @@ struct DoctorListItemView: View {
     var doctor: Doctor
     var onApprove: () -> Void
     var onReject: () -> Void
+    var onInfo: () -> Void
 
     var body: some View {
         HStack {
@@ -173,6 +178,15 @@ struct DoctorListItemView: View {
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }
+
+            Spacer()
+
+            NavigationLink(destination: DoctorInformationView(viewModel: DoctorInformationViewModel(doctor: doctor))) {
+                Image(systemName: "info.circle")
+                    .foregroundColor(.blue)
+                    .padding()
+            }
+            .buttonStyle(BorderlessButtonStyle())
         }
     }
 }
@@ -184,3 +198,4 @@ struct DoctorApprovalList_Previews: PreviewProvider {
             .environmentObject(DoctorApprovalModel())
     }
 }
+

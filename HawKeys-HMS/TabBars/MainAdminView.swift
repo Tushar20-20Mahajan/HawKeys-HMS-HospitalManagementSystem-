@@ -1,10 +1,3 @@
-//
-//  MainAdminView.swift
-//  Hospital-Management-System
-//
-//  Created by MACBOOK on 05/06/24.
-//
-
 import SwiftUI
 
 struct MainAdminView: View {
@@ -41,6 +34,8 @@ struct MainAdminView: View {
     }
 }
 
-#Preview {
-    MainAdminView()
+struct MainAdminView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainAdminView()
+    }
 }
