@@ -1,10 +1,3 @@
-//
-//  LabTestsList.swift
-//  Hospital-Management-System
-//
-//  Created by MACBOOK on 05/06/24.
-//
-
 
 import Foundation
 
@@ -38,7 +31,7 @@ struct TestDetails: Codable, Identifiable {
 struct BookAppointmentResponse: Codable {
     let success: Bool
     let data: TestDetails
-    //let message: String?
+  
 }
 
 

@@ -1,9 +1,3 @@
-//
-//  User.swift
-//  Hospital-Management-System
-//
-//  Created by MACBOOK on 05/06/24.
-//
 
 import Foundation
 import SwiftUI
@@ -31,23 +25,7 @@ struct User: Codable{
     let createdAt: String
     let updatedAt: String
     
-//    init(_id: String, accountType: String, firstName: String, lastName: String, age: Int, gender: String, phoneNumber: Int, approved: Bool, email: String, password: String, appointments: [String], schedule: [String], createdAt: String, updatedAt: String) {
-//        self._id = _id
-//        self.accountType = accountType
-//        self.firstName = firstName
-//        self.lastName = lastName
-//        self.age = age
-//        self.gender = gender
-//        self.phoneNumber = phoneNumber
-//        self.approved = approved
-//        self.email = email
-//        self.password = password
-//        self.appointments = appointments
-//        self.schedule = schedule
-//        self.createdAt = createdAt
-//        self.updatedAt = updatedAt
-//    }
-    
+
     enum CodingKeys: CodingKey {
         case _id
         case accountType

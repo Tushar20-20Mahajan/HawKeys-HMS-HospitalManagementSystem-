@@ -1,9 +1,4 @@
-//
-//  Patient.swift
-//  Hospital-Management-System
-//
-//  Created by MACBOOK on 04/06/24.
-//
+
 
 import Foundation
 import SwiftUI
@@ -76,30 +71,5 @@ struct DoctorFormView: View {
             }
         }
     }
-    //
-    //    func saveDoctor() {
-    //        // Handle saving the doctor data
-    //        guard let categoryID = selectedCategoryID else { return }
-    //        let newDoctor = Doctor(id: UUID(), name: name, categoryID: categoryID)
-    //        // Save the doctor (e.g., add to an array, save to a database, etc.)
-    //        // For this example, let's just print the new doctor
-    //        print(newDoctor)
-    //    }
-    //}
-    //struct ContentView: View {
-    //    var body: some View {
-    //        NavigationView {
-    //            List {
-    //                ForEach(categories) { category in
-    //                    Section(header: Text(category.name)) {
-    //                        ForEach(doctors.filter { $0.categoryID == category.id }) { doctor in
-    //                            Text(doctor.name)
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //            .navigationTitle("Doctors")
-    //        }
-    //    }
-    //}
+   
 }

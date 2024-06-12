@@ -19,6 +19,17 @@
 		C03BD7052C19608E00D2FEA7 /* LabTestsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD6FE2C19608E00D2FEA7 /* LabTestsList.swift */; };
 		C03BD7062C19608E00D2FEA7 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD6FF2C19608E00D2FEA7 /* Patient.swift */; };
 		C03BD7072C19608E00D2FEA7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7002C19608E00D2FEA7 /* User.swift */; };
+		C03BD7092C1961FE00D2FEA7 /* appGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7082C1961FE00D2FEA7 /* appGradient.swift */; };
+		C03BD70B2C19620B00D2FEA7 /* navigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD70A2C19620B00D2FEA7 /* navigationHelper.swift */; };
+		C03BD7122C19623700D2FEA7 /* adminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD70C2C19623700D2FEA7 /* adminController.swift */; };
+		C03BD7132C19623700D2FEA7 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD70D2C19623700D2FEA7 /* auth.swift */; };
+		C03BD7142C19623700D2FEA7 /* doctorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD70E2C19623700D2FEA7 /* doctorController.swift */; };
+		C03BD7152C19623700D2FEA7 /* labController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD70F2C19623700D2FEA7 /* labController.swift */; };
+		C03BD7162C19623700D2FEA7 /* patientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7102C19623700D2FEA7 /* patientController.swift */; };
+		C03BD7192C19628400D2FEA7 /* MainPatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD7182C19628400D2FEA7 /* MainPatientView.swift */; };
+		C03BD71B2C1962E100D2FEA7 /* MainDoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71A2C1962E100D2FEA7 /* MainDoctorView.swift */; };
+		C03BD71D2C1962F800D2FEA7 /* MainAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71C2C1962F800D2FEA7 /* MainAdminView.swift */; };
+		C03BD71F2C19638300D2FEA7 /* LaboratoryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +46,17 @@
 		C03BD6FE2C19608E00D2FEA7 /* LabTestsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabTestsList.swift; sourceTree = "<group>"; };
 		C03BD6FF2C19608E00D2FEA7 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		C03BD7002C19608E00D2FEA7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C03BD7082C1961FE00D2FEA7 /* appGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appGradient.swift; sourceTree = "<group>"; };
+		C03BD70A2C19620B00D2FEA7 /* navigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navigationHelper.swift; sourceTree = "<group>"; };
+		C03BD70C2C19623700D2FEA7 /* adminController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminController.swift; sourceTree = "<group>"; };
+		C03BD70D2C19623700D2FEA7 /* auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
+		C03BD70E2C19623700D2FEA7 /* doctorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doctorController.swift; sourceTree = "<group>"; };
+		C03BD70F2C19623700D2FEA7 /* labController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = labController.swift; sourceTree = "<group>"; };
+		C03BD7102C19623700D2FEA7 /* patientController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientController.swift; sourceTree = "<group>"; };
+		C03BD7182C19628400D2FEA7 /* MainPatientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPatientView.swift; sourceTree = "<group>"; };
+		C03BD71A2C1962E100D2FEA7 /* MainDoctorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDoctorView.swift; sourceTree = "<group>"; };
+		C03BD71C2C1962F800D2FEA7 /* MainAdminView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAdminView.swift; sourceTree = "<group>"; };
+		C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoryContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +89,14 @@
 		C03BD6E72C19603000D2FEA7 /* HawKeys-HMS */ = {
 			isa = PBXGroup;
 			children = (
+				C03BD7112C19623700D2FEA7 /* Controllers */,
 				C03BD7012C19608E00D2FEA7 /* Models */,
 				C03BD6F82C19607C00D2FEA7 /* Authentication */,
+				C03BD7172C19625200D2FEA7 /* TabBars */,
 				C03BD6E82C19603000D2FEA7 /* HawKeys_HMSApp.swift */,
 				C03BD6EA2C19603000D2FEA7 /* ContentView.swift */,
+				C03BD7082C1961FE00D2FEA7 /* appGradient.swift */,
+				C03BD70A2C19620B00D2FEA7 /* navigationHelper.swift */,
 				C03BD6EC2C19603100D2FEA7 /* Assets.xcassets */,
 				C03BD6EE2C19603100D2FEA7 /* Preview Content */,
 			);
@@ -105,6 +131,29 @@
 				C03BD7002C19608E00D2FEA7 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C03BD7112C19623700D2FEA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C03BD70C2C19623700D2FEA7 /* adminController.swift */,
+				C03BD70D2C19623700D2FEA7 /* auth.swift */,
+				C03BD70E2C19623700D2FEA7 /* doctorController.swift */,
+				C03BD70F2C19623700D2FEA7 /* labController.swift */,
+				C03BD7102C19623700D2FEA7 /* patientController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C03BD7172C19625200D2FEA7 /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				C03BD7182C19628400D2FEA7 /* MainPatientView.swift */,
+				C03BD71A2C1962E100D2FEA7 /* MainDoctorView.swift */,
+				C03BD71C2C1962F800D2FEA7 /* MainAdminView.swift */,
+				C03BD71E2C19638300D2FEA7 /* LaboratoryContentView.swift */,
+			);
+			path = TabBars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,14 +227,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C03BD6FA2C19607C00D2FEA7 /* userSignUp.swift in Sources */,
+				C03BD7152C19623700D2FEA7 /* labController.swift in Sources */,
+				C03BD71F2C19638300D2FEA7 /* LaboratoryContentView.swift in Sources */,
 				C03BD6F92C19607C00D2FEA7 /* userSignIn.swift in Sources */,
 				C03BD7062C19608E00D2FEA7 /* Patient.swift in Sources */,
 				C03BD6EB2C19603000D2FEA7 /* ContentView.swift in Sources */,
 				C03BD7052C19608E00D2FEA7 /* LabTestsList.swift in Sources */,
+				C03BD7122C19623700D2FEA7 /* adminController.swift in Sources */,
+				C03BD71D2C1962F800D2FEA7 /* MainAdminView.swift in Sources */,
+				C03BD70B2C19620B00D2FEA7 /* navigationHelper.swift in Sources */,
+				C03BD7132C19623700D2FEA7 /* auth.swift in Sources */,
 				C03BD7032C19608E00D2FEA7 /* Appointment.swift in Sources */,
 				C03BD7022C19608E00D2FEA7 /* Admin.swift in Sources */,
 				C03BD6E92C19603000D2FEA7 /* HawKeys_HMSApp.swift in Sources */,
+				C03BD71B2C1962E100D2FEA7 /* MainDoctorView.swift in Sources */,
+				C03BD7162C19623700D2FEA7 /* patientController.swift in Sources */,
+				C03BD7192C19628400D2FEA7 /* MainPatientView.swift in Sources */,
+				C03BD7092C1961FE00D2FEA7 /* appGradient.swift in Sources */,
 				C03BD7072C19608E00D2FEA7 /* User.swift in Sources */,
+				C03BD7142C19623700D2FEA7 /* doctorController.swift in Sources */,
 				C03BD7042C19608E00D2FEA7 /* Doctor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
