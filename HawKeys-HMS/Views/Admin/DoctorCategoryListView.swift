@@ -43,7 +43,7 @@ struct DoctorCategoryListView: View {
     }
     
     func fetchDoctors() {
-            let doctorCategory = DoctorCategory()
+            let doctorCategory = DoctorAPI()
             doctorCategory.getDoctors { result in
                 switch result {
                 case .success(let doctorResponse):
