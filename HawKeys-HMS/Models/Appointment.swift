@@ -9,6 +9,33 @@
 import Foundation
 import Combine
 
+
+
+
+
+struct Appointment: Codable {
+    let id: String
+    let patient: String
+    let symptom: String
+    let doctor: String
+    let date: String
+    let timeSlot: String
+    let status: String
+    let prescription: String?
+    let createdAt: String
+    let updatedAt: String
+    let tests: [Test]
+    let version: Int
+
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case patient, symptom, doctor, date, timeSlot, status, prescription, createdAt, updatedAt, tests
+        case version = "__v"
+    }
+}
+
+
+
 struct PatientAppointmentData: Codable {
     var _id: String
     var firstName: String

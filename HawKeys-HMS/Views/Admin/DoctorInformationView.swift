@@ -17,7 +17,7 @@ struct DoctorInformationView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        NavigationView {
+       
             ScrollView {
                 VStack(spacing: 20) {
                     Image("jipnesh")
@@ -59,75 +59,15 @@ struct DoctorInformationView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                     
-                    HStack {
-                        Text("Document")
-                            .font(.headline)
-                        Spacer()
-                        Button(action: {
-                            showingDocument.toggle()
-                        }) {
-                            Text("View Document")
-                                .foregroundColor(.blue)
-                        }
-                        .sheet(isPresented: $showingDocument) {
-                            DocumentView(imageName: viewModel.doctor.email)
-                        }
-                    }
-                    .padding(.horizontal)
+                   
                     
-                    HStack(spacing: 20) {
-                        Button(action: {
-                            showingApproveAlert = true
-                        }) {
-                            Text("Approve")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .alert(isPresented: $showingApproveAlert) {
-                            Alert(title: Text("Success"), message: Text("Doctor approved successfully"), dismissButton: .default(Text("OK")))
-                        }
-                        
-                        Button(action: {
-                            presentationMode.wrappedValue.dismiss()
-                        }) {
-                            Text("Reject")
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.red)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                    }
-                    .padding(.horizontal)
+                   
                 }
                 .padding()
                 .navigationTitle("Profile")
-                .navigationBarItems(leading: Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "arrow.left")
-                        .foregroundColor(.blue)
-                }, trailing: HStack {
-                    Button(action: {
-                        // Share action
-                    }) {
-                        Image(systemName: "square.and.arrow.up")
-                            .foregroundColor(.blue)
-                    }
-                    Button(action: {
-                        isEditing.toggle()
-                    }) {
-                        Text("Edit")
-                            .foregroundColor(.blue)
-                    }
-                })
-                .sheet(isPresented: $isEditing) {
-                    EditView(doctor: $viewModel.doctor, isEditing: $isEditing)
-                }
-            }
+                .navigationBarTitleDisplayMode(.inline)
+                
+            
         }
     }
 }
@@ -145,58 +85,3 @@ struct InfoRow: View {
     }
 }
 
-struct EditView: View {
-    @Binding var doctor: Doctor
-    @Binding var isEditing: Bool
-    
-    var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Personal information")) {
-                    TextField("Name", text: $doctor.firstName)
-                    TextField("Last Name", text: $doctor.lastName)
-                    TextField("Email", text: $doctor.email)
-                    TextField("Gender", text: $doctor.gender)
-                    TextField("Phone Number", value: $doctor.phoneNumber, formatter: NumberFormatter())
-                    TextField("Qualification", text: $doctor.qualification)
-                    TextField("Specialization", text: $doctor.specialization)
-                    TextField("Experience", text: $doctor.experience)
-                    TextField("Fees", text: $doctor.fees)
-                }
-                
-                Section(header: Text("About")) {
-                    TextField("About", text: $doctor.about)
-                }
-                
-                Section(header: Text("Document")) {
-                    TextField("Document", text: $doctor.email)
-                }
-            }
-            .navigationTitle("Edit Profile")
-            .navigationBarItems(trailing: Button("Done") {
-                isEditing = false
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-            })
-        }
-    }
-}
-
-struct DocumentView: View {
-    let imageName: String
-    
-    var body: some View {
-        VStack {
-            if let image = UIImage(named: imageName) {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .padding()
-            } else {
-                Text("Document image not found")
-                    .foregroundColor(.red)
-                    .padding()
-            }
-        }
-    }
-}

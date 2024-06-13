@@ -44,7 +44,7 @@ struct Patient: Codable, Identifiable {
 
 struct PatientResponse: Codable {
     let success: Bool
-    let data: [Patient]
+    let data: [User]
 }
 
 

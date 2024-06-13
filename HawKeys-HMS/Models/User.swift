@@ -2,8 +2,7 @@
 import Foundation
 import SwiftUI
 // MARK: USER
-
-struct User: Codable{
+struct User: Codable, Identifiable {
     let _id: String
     let accountType: String
     let firstName: String
@@ -17,16 +16,15 @@ struct User: Codable{
     let approved: Bool
     let email: String
     let password: String
-    let licenseNumber: Int?
+    let licenseNumber: String?
     let specialization: String?
     let schedule: [Schedule]?
     let experience: String?
-    let appointments: [String]?
+    let appointments: [Appointment]?
     let createdAt: String
     let updatedAt: String
     
-
-    enum CodingKeys: CodingKey {
+    enum CodingKeys: String, CodingKey {
         case _id
         case accountType
         case firstName
@@ -49,7 +47,7 @@ struct User: Codable{
         case updatedAt
     }
     
-    init(from decoder: any Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self._id = try container.decode(String.self, forKey: ._id)
         self.accountType = try container.decode(String.self, forKey: .accountType)
@@ -61,25 +59,22 @@ struct User: Codable{
         self.approved = try container.decode(Bool.self, forKey: .approved)
         self.email = try container.decode(String.self, forKey: .email)
         self.password = try container.decode(String.self, forKey: .password)
-        self.appointments = try container.decodeIfPresent([String].self, forKey: .appointments)
+        self.appointments = try container.decodeIfPresent([Appointment].self, forKey: .appointments)
         self.schedule = try container.decodeIfPresent([Schedule].self, forKey: .schedule)
         self.createdAt = try container.decode(String.self, forKey: .createdAt)
         self.updatedAt = try container.decode(String.self, forKey: .updatedAt)
-        bloodGroup = try container.decodeIfPresent(String.self, forKey: .bloodGroup)
-        height = try container.decodeIfPresent(Int.self, forKey: .height)
-        weight = try container.decodeIfPresent(Int.self, forKey: .weight)
-        licenseNumber = try container.decodeIfPresent(Int.self, forKey: .licenseNumber)
-        specialization = try container.decodeIfPresent(String.self, forKey: .specialization)
-        experience = try container.decodeIfPresent(String.self, forKey: .experience)
-        
-        
-        
- 
-        
-        
+        self.bloodGroup = try container.decodeIfPresent(String.self, forKey: .bloodGroup)
+        self.height = try container.decodeIfPresent(Int.self, forKey: .height)
+        self.weight = try container.decodeIfPresent(Int.self, forKey: .weight)
+        self.licenseNumber = try container.decodeIfPresent(String.self, forKey: .licenseNumber)
+        self.specialization = try container.decodeIfPresent(String.self, forKey: .specialization)
+        self.experience = try container.decodeIfPresent(String.self, forKey: .experience)
+    }
+    
+    var id: String {
+        return _id
     }
 }
-
 
 struct UserRegistrationResponse: Decodable {
 //    let message: String

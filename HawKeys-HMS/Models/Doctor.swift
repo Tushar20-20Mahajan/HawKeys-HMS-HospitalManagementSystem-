@@ -236,9 +236,8 @@ class DoctorAPI {
 
 
 
-
 class NetworkManagerOfAdmin: ObservableObject {
-    @Published var patients: [Patient] = []
+    @Published var patients: [User] = []
     
     func getAllPatients() {
         guard let url = URL(string: "https://hms-backend-1-1aof.onrender.com/admin/patients") else { return }

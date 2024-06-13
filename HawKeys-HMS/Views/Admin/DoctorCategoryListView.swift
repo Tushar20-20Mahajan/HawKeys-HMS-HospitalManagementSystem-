@@ -106,29 +106,97 @@ let sampleCategories = [
 
 
 
+
 struct DoctorsListView: View {
     var doctors: [Doctor]
+    @State private var searchText: String = ""
+    
+    // Computed property to filter doctors based on search text
+    var filteredDoctors: [Doctor] {
+        if searchText.isEmpty {
+            return doctors
+        } else {
+            return doctors.filter { doctor in
+                doctor.firstName.lowercased().contains(searchText.lowercased()) ||
+                doctor.lastName.lowercased().contains(searchText.lowercased()) ||
+                String(doctor.phoneNumber).contains(searchText)
+            }
+        }
+    }
     
     var body: some View {
-        List(doctors) { doctor in
-            VStack(alignment: .leading) {
-                Text("\(doctor.firstName) \(doctor.lastName)")
-                    .font(.headline)
-                Text(doctor.specialization)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                Text("Experience: \(doctor.experience)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                Text("Fees: \(doctor.fees)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+        ScrollView {
+            VStack(spacing: 16) {
+                ForEach(filteredDoctors) { doctor in
+                    VStack(alignment: .leading) {
+                        HStack {
+                            VStack(alignment: .leading, spacing: 10) {
+                                HStack {
+                                    VStack {
+                                        Image("user2") // Replace with your image
+                                            .resizable()
+                                            .frame(width: 90, height: 90)
+                                            .clipShape(RoundedRectangle(cornerRadius: 9))
+                                    }
+                                    .padding(.top)
+                                    
+                                    Spacer()
+                                    VStack(alignment: .trailing) {
+                                        Text("\(doctor.firstName) \(doctor.lastName)")
+                                            .font(.title3)
+                                            .fontWeight(.medium)
+                                        Text(String(doctor.phoneNumber))
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                        
+                                        Text("\(doctor.specialization)")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                        
+                                        Text("\(doctor.experience)")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                    }
+                                }
+                                .padding(.top, -9)
+                                
+                                Spacer().frame(height: 20)
+                                HStack {
+                                    Text("Fees:  \(doctor.fees)")
+                                        .font(.system(size: 14))
+                                        .fontWeight(.bold)
+                                        .padding(9)
+                                        .background(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1))
+                                    
+                                    Spacer()
+                                    
+                                    NavigationLink(destination: DoctorInformationView(viewModel: DoctorInformationViewModel(doctor: doctor))) {
+                                        Text("↓")
+                                            .font(.system(size: 20))
+                                            .frame(width: 24)
+                                            .padding(12)
+                                            .rotationEffect(Angle(degrees: 270))
+                                            .foregroundColor(.white)
+                                            .background(RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 1).fill(Color(red: 97/255, green: 120/255, blue: 187/255)))
+                                    }
+                                    .buttonStyle(BorderlessButtonStyle())
+                                }
+                            }
+                        }
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 16).fill(Color.white))
+                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
+                        .padding(.horizontal)
+                    }
+                }
             }
-            .padding(.vertical)
+            .padding()
         }
         .navigationTitle("Doctors")
+        .searchable(text: $searchText)
     }
 }
+
 
 #Preview {
     DoctorCategoryListView()
