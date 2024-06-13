@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0303CF82C1A17410035CADE /* AdminLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0303CF72C1A17410035CADE /* AdminLabView.swift */; };
+		C0303CFA2C1A17520035CADE /* AdminPatientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0303CF92C1A17520035CADE /* AdminPatientsListView.swift */; };
 		C03BD6E92C19603000D2FEA7 /* HawKeys_HMSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD6E82C19603000D2FEA7 /* HawKeys_HMSApp.swift */; };
 		C03BD6EB2C19603000D2FEA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BD6EA2C19603000D2FEA7 /* ContentView.swift */; };
 		C03BD6ED2C19603100D2FEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03BD6EC2C19603100D2FEA7 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0303CF72C1A17410035CADE /* AdminLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLabView.swift; sourceTree = "<group>"; };
+		C0303CF92C1A17520035CADE /* AdminPatientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPatientsListView.swift; sourceTree = "<group>"; };
 		C03BD6E52C19603000D2FEA7 /* HawKeys-HMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HawKeys-HMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03BD6E82C19603000D2FEA7 /* HawKeys_HMSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawKeys_HMSApp.swift; sourceTree = "<group>"; };
 		C03BD6EA2C19603000D2FEA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				C08A61202C19AE0F0013E5FA /* DoctorInformationView.swift */,
 				C03BD7242C19669600D2FEA7 /* DoctorCategoryListView.swift */,
 				C03BD7282C1968A800D2FEA7 /* AdminProfile.swift */,
+				C0303CF72C1A17410035CADE /* AdminLabView.swift */,
+				C0303CF92C1A17520035CADE /* AdminPatientsListView.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -280,12 +286,14 @@
 				C03BD7062C19608E00D2FEA7 /* Patient.swift in Sources */,
 				C03BD6EB2C19603000D2FEA7 /* ContentView.swift in Sources */,
 				C03BD72B2C19701D00D2FEA7 /* DoctorApprovalList.swift in Sources */,
+				C0303CF82C1A17410035CADE /* AdminLabView.swift in Sources */,
 				C03BD7052C19608E00D2FEA7 /* LabTestsList.swift in Sources */,
 				C03BD7292C1968A800D2FEA7 /* AdminProfile.swift in Sources */,
 				C03BD7122C19623700D2FEA7 /* adminController.swift in Sources */,
 				C03BD7272C19681900D2FEA7 /* AdminHomeView.swift in Sources */,
 				C03BD71D2C1962F800D2FEA7 /* MainAdminView.swift in Sources */,
 				C03BD7252C19669600D2FEA7 /* DoctorCategoryListView.swift in Sources */,
+				C0303CFA2C1A17520035CADE /* AdminPatientsListView.swift in Sources */,
 				C03BD70B2C19620B00D2FEA7 /* navigationHelper.swift in Sources */,
 				C03BD7132C19623700D2FEA7 /* auth.swift in Sources */,
 				C03BD7032C19608E00D2FEA7 /* Appointment.swift in Sources */,
