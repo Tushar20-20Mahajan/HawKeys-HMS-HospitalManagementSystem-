@@ -29,14 +29,147 @@ var body: some View {
                 
                 DoctorCardView()
                 
-                // Total Doctors Graph Section
-                SectionView(title: "Total Doctors", destination: DoctorCategoryListView()) {
-                    BarChartView(data: [10, 15, 12, 17, 9, 11, 13, 16], title: "Doctors")
-                }
+                VStack{
+                                        HStack(spacing: 1){
+                                            VStack{
+                                                HStack{
+                                                    Image(systemName: "drop")
+                                                        .font(.title)
+                                                        .foregroundColor(.red)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    Spacer()
+//                                                    Text("\(bloodGroup)")
+                                                    Text("A+")
+                                                        .font(.title3)
+                                                        .fontWeight(.medium)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    
+                                                }
+                                                .frame(width: 160)
+                                                .padding(.vertical)
+                                                
+                                                Spacer()
+                                                Text("Blood Group")
+                                                    .font(.title3)
+                                                    .fontWeight(.semibold)
+                                                    .padding(8)
+                                            }
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(Color.white)
+                                                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                            )
+                                            .padding(.horizontal)
+                                            
+                                            VStack{
+                                                HStack{
+                                                    Image(systemName: "ruler")
+                                                        .font(.title)
+                                                        .foregroundColor(.purple)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                        .rotationEffect(Angle(degrees: 90))
+                                                    Spacer()
+//                                                    Text("\(height)")
+                                                    Text("156 cm")
+                                                        .font(.title3)
+                                                        .fontWeight(.medium)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    
+                                                }
+                                                .frame(width: 160)
+                                                .padding(.vertical)
+                                                
+                                                Spacer()
+                                                Text("Height")
+                                                    .font(.title3)
+                                                    .fontWeight(.semibold)
+                                                    .padding(8)
+                                            }
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(Color.white)
+                                                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                            )
+                                            .padding(.horizontal)
+                                            
+                                            
+                                        }
+                                        
+                                        HStack(spacing: 1){
+                                            VStack{
+                                                HStack{
+                                                    Image(systemName: "scalemass")
+                                                        .font(.title)
+                                                        .foregroundColor(.orange)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    Spacer()
+//                                                    Text("\(weight)")
+                                                    Text("56 Kg")
+                                                        .font(.title3)
+                                                        .fontWeight(.medium)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    
+                                                }
+                                                .frame(width: 160)
+                                                .padding(.vertical)
+                                                
+                                                Spacer()
+                                                Text("Weight")
+                                                    .font(.title3)
+                                                    .fontWeight(.semibold)
+                                                    .padding(8)
+                                            }
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(Color.white)
+                                                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                            )
+                                            .padding(.horizontal)
+                                            
+                                            
+                                            
+                                            VStack{
+                                                HStack{
+                                                    Text("BMI")
+                                                        .font(.title2)
+                                                        .foregroundColor(.blue)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    Spacer()
+                                                    //Text(String(format: "%.1f", bmi))
+                                                        .font(.title3)
+                                                        .fontWeight(.medium)
+                                                        .padding(10)
+                                                        .padding(.top,-8)
+                                                    
+                                                }
+                                                .frame(width: 160)
+                                                .padding(.vertical)
+                                                
+                                                Spacer()
+                                                Text("BMI")
+                                                    .font(.title3)
+                                                    .fontWeight(.semibold)
+                                                    .padding(8)
+                                            }
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(Color.white)
+                                                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                            )
+                                            .padding(.horizontal)
+                                        }
+                                    }
                 
                 // Total Patients Graph Section
-                SectionView(title: "Total Patients", destination: AdminPatientsListView()) {
-                    BarChartView(data: [13, 9, 11, 15, 10, 17, 14, 12], title: "Patients")
+                SectionView(title: "Total Doctors", destination: DoctorCategoryListView()) {
+                    BarChartView(data: [13, 9, 11, 15, 10, 17, 14, 12], title: "Doctors")
                 }
             }
             .navigationTitle("Admin")
